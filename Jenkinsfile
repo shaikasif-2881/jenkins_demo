@@ -21,7 +21,7 @@ pipeline {
 
         stage('Build Frontend Image') {
             steps {
-                sh 'docker build -t $DOCKER_HUB/frontend ./frontend'
+                sh 'docker build -t $DOCKER_HUB/Frontend ./Frontend'
             }
         }
 
