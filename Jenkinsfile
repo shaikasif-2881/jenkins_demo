@@ -28,7 +28,7 @@ pipeline {
         stage('Push Images') {
             steps {
                 sh 'docker push $DOCKER_HUB/backend'
-                sh 'docker push $DOCKER_HUB/frontend'
+                sh 'docker push $DOCKER_HUB/Frontend'
             }
         }
 
@@ -37,7 +37,7 @@ pipeline {
                 sh '''
                 docker stop app || true
                 docker rm app || true
-                docker run -d -p 80:80 $DOCKER_HUB/frontend
+                docker run -d -p 80:80 $DOCKER_HUB/Frontend
                 '''
             }
         }
