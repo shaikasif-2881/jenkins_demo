@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/shaikasif-2881/fullstack-ci-cd-app.git'
+                git 'https://github.com/shaikasif-2881/jenkins_demo.git'
             }
         }
 
